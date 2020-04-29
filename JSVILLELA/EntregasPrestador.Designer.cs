@@ -31,9 +31,9 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.dgv_entregas = new System.Windows.Forms.DataGridView();
             this.dgv_itens = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_entregas = new System.Windows.Forms.Label();
+            this.lbl_itens = new System.Windows.Forms.Label();
+            this.btn_apagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_entregas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_itens)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.dgv_entregas.AllowUserToOrderColumns = true;
             this.dgv_entregas.AllowUserToResizeColumns = false;
             this.dgv_entregas.AllowUserToResizeRows = false;
-            this.dgv_entregas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_entregas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_entregas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_entregas.Location = new System.Drawing.Point(12, 67);
             this.dgv_entregas.MultiSelect = false;
@@ -63,7 +63,7 @@
             this.dgv_entregas.ReadOnly = true;
             this.dgv_entregas.RowHeadersVisible = false;
             this.dgv_entregas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_entregas.Size = new System.Drawing.Size(170, 382);
+            this.dgv_entregas.Size = new System.Drawing.Size(200, 382);
             this.dgv_entregas.TabIndex = 1;
             this.dgv_entregas.SelectionChanged += new System.EventHandler(this.dgv_entregas_SelectionChanged);
             // 
@@ -73,47 +73,47 @@
             this.dgv_itens.AllowUserToDeleteRows = false;
             this.dgv_itens.AllowUserToResizeColumns = false;
             this.dgv_itens.AllowUserToResizeRows = false;
-            this.dgv_itens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_itens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_itens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_itens.Location = new System.Drawing.Point(188, 67);
+            this.dgv_itens.Location = new System.Drawing.Point(224, 67);
             this.dgv_itens.MultiSelect = false;
             this.dgv_itens.Name = "dgv_itens";
             this.dgv_itens.ReadOnly = true;
             this.dgv_itens.RowHeadersVisible = false;
             this.dgv_itens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_itens.Size = new System.Drawing.Size(484, 382);
+            this.dgv_itens.Size = new System.Drawing.Size(448, 382);
             this.dgv_itens.TabIndex = 2;
             // 
-            // label1
+            // lbl_entregas
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(68, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Entregas";
+            this.lbl_entregas.AutoSize = true;
+            this.lbl_entregas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_entregas.Location = new System.Drawing.Point(67, 47);
+            this.lbl_entregas.Name = "lbl_entregas";
+            this.lbl_entregas.Size = new System.Drawing.Size(61, 17);
+            this.lbl_entregas.TabIndex = 3;
+            this.lbl_entregas.Text = "Entregas";
             // 
-            // label2
+            // lbl_itens
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(376, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Itens da entrega";
+            this.lbl_itens.AutoSize = true;
+            this.lbl_itens.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_itens.Location = new System.Drawing.Point(376, 47);
+            this.lbl_itens.Name = "lbl_itens";
+            this.lbl_itens.Size = new System.Drawing.Size(108, 17);
+            this.lbl_itens.TabIndex = 4;
+            this.lbl_itens.Text = "Itens da entrega";
             // 
-            // button1
+            // btn_apagar
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::JSVILLELA.Properties.Resources.Trash;
-            this.button1.Location = new System.Drawing.Point(623, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 49);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_apagar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_apagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_apagar.Image = global::JSVILLELA.Properties.Resources.Trash;
+            this.btn_apagar.Location = new System.Drawing.Point(623, 12);
+            this.btn_apagar.Name = "btn_apagar";
+            this.btn_apagar.Size = new System.Drawing.Size(49, 49);
+            this.btn_apagar.TabIndex = 5;
+            this.btn_apagar.UseVisualStyleBackColor = false;
             // 
             // EntregasPrestador
             // 
@@ -121,9 +121,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JSVILLELA.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_apagar);
+            this.Controls.Add(this.lbl_itens);
+            this.Controls.Add(this.lbl_entregas);
             this.Controls.Add(this.dgv_itens);
             this.Controls.Add(this.dgv_entregas);
             this.Controls.Add(this.lbl_nome);
@@ -148,8 +148,8 @@
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.DataGridView dgv_entregas;
         private System.Windows.Forms.DataGridView dgv_itens;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_entregas;
+        private System.Windows.Forms.Label lbl_itens;
+        private System.Windows.Forms.Button btn_apagar;
     }
 }

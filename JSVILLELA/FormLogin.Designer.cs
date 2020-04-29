@@ -42,7 +42,7 @@
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_usuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(12, 185);
+            this.lbl_usuario.Location = new System.Drawing.Point(40, 185);
             this.lbl_usuario.Name = "lbl_usuario";
             this.lbl_usuario.Size = new System.Drawing.Size(69, 21);
             this.lbl_usuario.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.lbl_senha.AutoSize = true;
             this.lbl_senha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_senha.Location = new System.Drawing.Point(17, 225);
+            this.lbl_senha.Location = new System.Drawing.Point(40, 224);
             this.lbl_senha.Name = "lbl_senha";
             this.lbl_senha.Size = new System.Drawing.Size(58, 21);
             this.lbl_senha.TabIndex = 1;
@@ -62,19 +62,19 @@
             // txt_usuario
             // 
             this.txt_usuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_usuario.Location = new System.Drawing.Point(89, 182);
+            this.txt_usuario.Location = new System.Drawing.Point(115, 182);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(233, 29);
+            this.txt_usuario.Size = new System.Drawing.Size(179, 29);
             this.txt_usuario.TabIndex = 1;
             this.txt_usuario.Text = "admin";
             // 
             // txt_senha
             // 
             this.txt_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_senha.Location = new System.Drawing.Point(89, 221);
+            this.txt_senha.Location = new System.Drawing.Point(115, 221);
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.PasswordChar = '•';
-            this.txt_senha.Size = new System.Drawing.Size(233, 29);
+            this.txt_senha.Size = new System.Drawing.Size(179, 29);
             this.txt_senha.TabIndex = 2;
             this.txt_senha.Text = "admin";
             // 
@@ -83,7 +83,7 @@
             this.btn_entrar.BackColor = System.Drawing.Color.White;
             this.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_entrar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.Location = new System.Drawing.Point(125, 280);
+            this.btn_entrar.Location = new System.Drawing.Point(117, 280);
             this.btn_entrar.Name = "btn_entrar";
             this.btn_entrar.Size = new System.Drawing.Size(100, 50);
             this.btn_entrar.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             this.picbox_logo.BackColor = System.Drawing.Color.Transparent;
             this.picbox_logo.Image = global::JSVILLELA.Properties.Resources.Logo;
-            this.picbox_logo.Location = new System.Drawing.Point(45, 15);
+            this.picbox_logo.Location = new System.Drawing.Point(42, 15);
             this.picbox_logo.Name = "picbox_logo";
             this.picbox_logo.Size = new System.Drawing.Size(250, 133);
             this.picbox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

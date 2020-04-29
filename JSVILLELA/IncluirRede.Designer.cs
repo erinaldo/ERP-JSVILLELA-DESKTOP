@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 23);
+            this.label1.Location = new System.Drawing.Point(12, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 17);
@@ -49,7 +49,7 @@
             // 
             // txt_filtro
             // 
-            this.txt_filtro.Location = new System.Drawing.Point(137, 20);
+            this.txt_filtro.Location = new System.Drawing.Point(139, 20);
             this.txt_filtro.Margin = new System.Windows.Forms.Padding(4);
             this.txt_filtro.Name = "txt_filtro";
             this.txt_filtro.Size = new System.Drawing.Size(261, 25);
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(406, 23);
+            this.label2.Location = new System.Drawing.Point(408, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
@@ -68,7 +68,7 @@
             // 
             // txt_quantidade
             // 
-            this.txt_quantidade.Location = new System.Drawing.Point(496, 20);
+            this.txt_quantidade.Location = new System.Drawing.Point(498, 20);
             this.txt_quantidade.Margin = new System.Windows.Forms.Padding(4);
             this.txt_quantidade.MaxLength = 6;
             this.txt_quantidade.Name = "txt_quantidade";
@@ -97,7 +97,7 @@
             this.btn_incluir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_incluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_incluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_incluir.Location = new System.Drawing.Point(250, 295);
+            this.btn_incluir.Location = new System.Drawing.Point(242, 295);
             this.btn_incluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_incluir.Name = "btn_incluir";
             this.btn_incluir.Size = new System.Drawing.Size(100, 50);

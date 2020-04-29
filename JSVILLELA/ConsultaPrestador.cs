@@ -20,7 +20,24 @@ namespace JSVILLELA
 
         public static int codigo = 0;
         public static string nomeprestador = null;
-        private float totalareceber = 0;
+        public static float totalareceber = 0;
+
+        public void AtualizaSaldo()
+        {
+            lbl_valortotal.Text = totalareceber.ToString("C");
+            if (totalareceber < 0)
+            {
+                lbl_valortotal.ForeColor = Color.Red;
+            }
+            else if (totalareceber > 0)
+            {
+                lbl_valortotal.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbl_valortotal.ForeColor = Color.Black;
+            }
+        }
 
         private void ConsultaPrestador_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -51,12 +68,68 @@ namespace JSVILLELA
             txt_tipoconta.Clear();
             txt_agencia.Clear();
             txt_conta.Clear();
-            lbl_total.Text = "Total a receber: " + totalareceber.ToString("C");
+            lbl_valortotal.Text = totalareceber.ToString("C");
+            lbl_valortotal.ForeColor = Color.Black;
             txt_codigo.Focus();
+        }
+
+        private float ValorEntregas()
+        {
+            float devido = 0;
+            try
+            {
+                Conexao conn = new Conexao();
+                MySqlCommand consulta = new MySqlCommand(@"SELECT SUM(A.quantidade * A.valor_entrega) AS 'devido' FROM tb_itensentrada AS A INNER JOIN tb_entrada AS B ON A.cod_entrada = B.cod_entrada WHERE B.cod_prestador = @codigo GROUP BY B.cod_prestador", conn.Conectar());
+                consulta.Parameters.AddWithValue("@codigo", codigo).MySqlDbType = MySqlDbType.Int32;
+                MySqlDataReader dr = consulta.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        devido = float.Parse(dr["devido"].ToString());
+                    }
+                }
+                conn.Desconectar();
+            }
+            catch(Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro ao buscar valores devidos ao prestador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            return devido;
+        }
+
+        private float ValorPagamentos()
+        {
+            float pago = 0;
+            try
+            {
+                Conexao conn = new Conexao();
+                MySqlCommand consulta = new MySqlCommand(@"SELECT SUM(valor) AS 'pago' FROM tb_pagprest WHERE cod_prestador = @codigo GROUP BY cod_prestador", conn.Conectar());
+                consulta.Parameters.AddWithValue("@codigo", codigo).MySqlDbType = MySqlDbType.Int32;
+                MySqlDataReader dr = consulta.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        pago = float.Parse(dr["pago"].ToString());
+                    }
+                }
+                conn.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro ao buscar valores pagos ao prestador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return pago;
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+            float devido = 0;
+            float pago = 0;
+
             if (string.IsNullOrEmpty(txt_codigo.Text.Trim()))
             {
                 MessageBox.Show("Digite um código.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,35 +141,42 @@ namespace JSVILLELA
                 MySqlCommand consulta = new MySqlCommand(@"SELECT * FROM tb_prestadores WHERE codigo = @codigo", conn.Conectar());
                 consulta.Parameters.AddWithValue("@codigo", txt_codigo.Text.Trim()).MySqlDbType = MySqlDbType.Int32;
                 MySqlDataReader dr = consulta.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
+                    if (dr.HasRows)
                     {
-                        codigo = int.Parse(dr["codigo"].ToString());
-                        nomeprestador = dr["nome"].ToString();
-                        txt_nome.Text = dr["nome"].ToString();
-                        txt_cpf.Text = dr["cpf"].ToString();
-                        txt_telefone.Text = dr["telefone"].ToString();
-                        txt_celular.Text = dr["celular"].ToString();
-                        txt_cep.Text = dr["cep"].ToString();
-                        txt_uf.Text = dr["uf"].ToString();
-                        txt_cidade.Text = dr["cidade"].ToString();
-                        txt_endereco.Text = dr["endereco"].ToString();
-                        txt_numero.Text = dr["numero"].ToString();
-                        txt_bairro.Text = dr["bairro"].ToString();
-                        txt_complemento.Text = dr["complemento"].ToString();
-                        txt_banco.Text = dr["banco"].ToString();
-                        txt_tipoconta.Text = dr["tipoconta"].ToString();
-                        txt_agencia.Text = dr["agencia"].ToString();
-                        txt_conta.Text = dr["conta"].ToString();
+                        while (dr.Read())
+                        {
+                            codigo = int.Parse(dr["codigo"].ToString());
+                            nomeprestador = dr["nome"].ToString();
+                            txt_nome.Text = dr["nome"].ToString();
+                            txt_cpf.Text = dr["cpf"].ToString();
+                            txt_telefone.Text = dr["telefone"].ToString();
+                            txt_celular.Text = dr["celular"].ToString();
+                            txt_cep.Text = dr["cep"].ToString();
+                            txt_uf.Text = dr["uf"].ToString();
+                            txt_cidade.Text = dr["cidade"].ToString();
+                            txt_endereco.Text = dr["endereco"].ToString();
+                            txt_numero.Text = dr["numero"].ToString();
+                            txt_bairro.Text = dr["bairro"].ToString();
+                            txt_complemento.Text = dr["complemento"].ToString();
+                            txt_banco.Text = dr["banco"].ToString();
+                            txt_tipoconta.Text = dr["tipoconta"].ToString();
+                            txt_agencia.Text = dr["agencia"].ToString();
+                            txt_conta.Text = dr["conta"].ToString();
+                        }
+
+                        conn.Desconectar();
+                        devido = ValorEntregas();
+                        pago = ValorPagamentos();
+                        totalareceber = devido - pago;
+                        AtualizaSaldo();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Não foi encontrado prestador com esse código", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    limpaform();
-                }
-                conn.Desconectar();
+                    else
+                    {
+                        conn.Desconectar();
+                        MessageBox.Show("Não foi encontrado prestador com esse código", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        limpaform();
+                    }
+                
             }
             catch (Exception erro)
             {
@@ -131,7 +211,23 @@ namespace JSVILLELA
                 }
                 else if (MessageBox.Show("Você tem certeza que quer apagar o registro de " +nomeprestador +"? Essa ação não pode ser desfeita", "Apagar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-
+                    try
+                    {
+                        Conexao conn = new Conexao();
+                        MySqlCommand cmd = new MySqlCommand(@"DELETE FROM tb_prestadores WHERE codigo = @codigo", conn.Conectar());
+                        cmd.Parameters.AddWithValue("@codigo", codigo).MySqlDbType = MySqlDbType.Int32;
+                        cmd.ExecuteNonQuery();
+                        conn.Desconectar();
+                        limpaform();
+                        MessageBox.Show("Registro de prestador apagado com sucesso.", "Registro apagado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception erro)
+                    {
+                        if (MessageBox.Show(erro.Message, "Erro ao apagar o registro do prestador", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                        {
+                            btn_excluir_Click(null, null);
+                        }
+                    }
                 }
             }
         }
@@ -149,13 +245,10 @@ namespace JSVILLELA
         {
             if (VerificaCodigo())
             {
-
+                PagamentosPrestador pagamentos = new PagamentosPrestador();
+                pagamentos.ShowDialog();
+                AtualizaSaldo();
             }
-        }
-
-        private void ConsultaPrestador_Load(object sender, EventArgs e)
-        {
-            lbl_total.Text = "Total a receber: " + totalareceber.ToString("C");
         }
     }
 }

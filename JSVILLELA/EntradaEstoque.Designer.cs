@@ -39,7 +39,7 @@
             this.total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.lbl_data = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dtp_entrada = new System.Windows.Forms.DateTimePicker();
             this.picbox_mais = new System.Windows.Forms.PictureBox();
             this.picbox_menos = new System.Windows.Forms.PictureBox();
             this.lbl_nome = new System.Windows.Forms.Label();
@@ -142,21 +142,21 @@
             this.lbl_data.AutoSize = true;
             this.lbl_data.BackColor = System.Drawing.Color.Transparent;
             this.lbl_data.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_data.Location = new System.Drawing.Point(379, 40);
+            this.lbl_data.Location = new System.Drawing.Point(509, 40);
             this.lbl_data.Name = "lbl_data";
             this.lbl_data.Size = new System.Drawing.Size(39, 17);
             this.lbl_data.TabIndex = 3;
             this.lbl_data.Text = "Data:";
             // 
-            // dateTimePicker
+            // dtp_entrada
             // 
-            this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(424, 37);
-            this.dateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(317, 25);
-            this.dateTimePicker.TabIndex = 2;
-            this.dateTimePicker.Value = new System.DateTime(2020, 4, 24, 23, 59, 59, 0);
+            this.dtp_entrada.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_entrada.Location = new System.Drawing.Point(554, 34);
+            this.dtp_entrada.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtp_entrada.Name = "dtp_entrada";
+            this.dtp_entrada.Size = new System.Drawing.Size(187, 25);
+            this.dtp_entrada.TabIndex = 2;
+            this.dtp_entrada.Value = new System.DateTime(2020, 4, 24, 23, 59, 59, 0);
             // 
             // picbox_mais
             // 
@@ -272,7 +272,7 @@
             this.Controls.Add(this.lbl_nome);
             this.Controls.Add(this.picbox_menos);
             this.Controls.Add(this.picbox_mais);
-            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.dtp_entrada);
             this.Controls.Add(this.lbl_data);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.lv_redes);
@@ -304,7 +304,7 @@
         private System.Windows.Forms.ColumnHeader total;
         private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Label lbl_data;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dtp_entrada;
         private System.Windows.Forms.PictureBox picbox_mais;
         private System.Windows.Forms.PictureBox picbox_menos;
         private System.Windows.Forms.Label lbl_nome;

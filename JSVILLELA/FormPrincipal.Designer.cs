@@ -36,6 +36,7 @@
             this.prestadoresDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.finançasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.consultasToolStripMenuItem,
-            this.redesToolStripMenuItem});
+            this.redesToolStripMenuItem,
+            this.finançasToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -103,9 +105,15 @@
             // incluirEntradaToolStripMenuItem
             // 
             this.incluirEntradaToolStripMenuItem.Name = "incluirEntradaToolStripMenuItem";
-            this.incluirEntradaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.incluirEntradaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.incluirEntradaToolStripMenuItem.Text = "Incluir Entrada";
             this.incluirEntradaToolStripMenuItem.Click += new System.EventHandler(this.incluirEntradaToolStripMenuItem_Click);
+            // 
+            // finançasToolStripMenuItem
+            // 
+            this.finançasToolStripMenuItem.Name = "finançasToolStripMenuItem";
+            this.finançasToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
+            this.finançasToolStripMenuItem.Text = "Finanças";
             // 
             // FormPrincipal
             // 
@@ -138,5 +146,6 @@
         private System.Windows.Forms.ToolStripMenuItem prestadoresDeServiçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirEntradaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem finançasToolStripMenuItem;
     }
 }

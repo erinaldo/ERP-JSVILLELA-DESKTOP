@@ -24,8 +24,10 @@ namespace JSVILLELA
 
         private void EntradaEstoque_Load(object sender, EventArgs e)
         {
-            dateTimePicker.MaxDate = System.DateTime.Today;
-            dateTimePicker.Value = System.DateTime.Today;
+            dtp_entrada.Format = DateTimePickerFormat.Custom;
+            dtp_entrada.CustomFormat = "dd/MM/yyyy  -  HH:mm";
+            dtp_entrada.MaxDate = System.DateTime.Now.AddDays(1);
+            dtp_entrada.Value = System.DateTime.Now;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -114,7 +116,7 @@ namespace JSVILLELA
         private void limpaform()
         {
             txt_codigo.Clear();
-            dateTimePicker.Value = System.DateTime.Today;
+            dtp_entrada.Value = System.DateTime.Now;
             lv_redes.Items.Clear();
             totalentrega = 0;
             lbl_totalentrega.Text = "Total da entrega: " + totalentrega.ToString("C");
@@ -146,7 +148,7 @@ namespace JSVILLELA
                     cmd.Parameters.AddWithValue("@usuario_entrada", DaoLogin.usuario).MySqlDbType = MySqlDbType.VarChar;
                     cmd.Parameters.AddWithValue("@cod_prestador", txt_codigo.Text.Trim()).MySqlDbType = MySqlDbType.Int32;
                     cmd.Parameters.AddWithValue("@total", totalentrega).MySqlDbType = MySqlDbType.Decimal;
-                    cmd.Parameters.AddWithValue("@dt_entrada", dateTimePicker.Value).MySqlDbType = MySqlDbType.DateTime;
+                    cmd.Parameters.AddWithValue("@dt_entrada", dtp_entrada.Value).MySqlDbType = MySqlDbType.DateTime;
                     cmd.ExecuteNonQuery();
                     conn.Desconectar();
 

@@ -63,6 +63,16 @@ namespace JSVILLELA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_New {
+            get {
+                object obj = ResourceManager.GetObject("Add-New", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -76,6 +86,16 @@ namespace JSVILLELA.Properties {
         internal static System.Drawing.Bitmap Background1 {
             get {
                 object obj = ResourceManager.GetObject("Background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Check {
+            get {
+                object obj = ResourceManager.GetObject("Check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +153,26 @@ namespace JSVILLELA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Magnifying_Glass {
+            get {
+                object obj = ResourceManager.GetObject("Magnifying-Glass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magnifying_Glass2 {
+            get {
+                object obj = ResourceManager.GetObject("Magnifying-Glass2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mais {
             get {
                 object obj = ResourceManager.GetObject("mais", resourceCulture);
@@ -153,6 +193,36 @@ namespace JSVILLELA.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Minus {
+            get {
+                object obj = ResourceManager.GetObject("Minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Print {
+            get {
+                object obj = ResourceManager.GetObject("Print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Question {
+            get {
+                object obj = ResourceManager.GetObject("Question", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trash {
             get {
                 object obj = ResourceManager.GetObject("Trash", resourceCulture);
@@ -166,6 +236,16 @@ namespace JSVILLELA.Properties {
         internal static System.Drawing.Bitmap Trash_can___02 {
             get {
                 object obj = ResourceManager.GetObject("Trash can - 02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wrong {
+            get {
+                object obj = ResourceManager.GetObject("Wrong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

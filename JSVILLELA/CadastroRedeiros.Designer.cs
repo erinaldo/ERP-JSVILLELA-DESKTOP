@@ -34,7 +34,7 @@
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.lbl_celular = new System.Windows.Forms.Label();
             this.gbox_endereco = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.mtxt_cep = new System.Windows.Forms.MaskedTextBox();
             this.txt_complemento = new System.Windows.Forms.TextBox();
             this.txt_bairro = new System.Windows.Forms.TextBox();
@@ -64,11 +64,9 @@
             this.mtxt_celular = new System.Windows.Forms.MaskedTextBox();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.gbox_endereco.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbox_banco.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_nome
@@ -76,7 +74,7 @@
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nome.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.Location = new System.Drawing.Point(31, 28);
+            this.lbl_nome.Location = new System.Drawing.Point(41, 28);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(48, 17);
             this.lbl_nome.TabIndex = 0;
@@ -87,7 +85,7 @@
             this.lbl_cpf.AutoSize = true;
             this.lbl_cpf.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cpf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf.Location = new System.Drawing.Point(45, 73);
+            this.lbl_cpf.Location = new System.Drawing.Point(55, 73);
             this.lbl_cpf.Name = "lbl_cpf";
             this.lbl_cpf.Size = new System.Drawing.Size(34, 17);
             this.lbl_cpf.TabIndex = 1;
@@ -98,7 +96,7 @@
             this.lbl_telefone.AutoSize = true;
             this.lbl_telefone.BackColor = System.Drawing.Color.Transparent;
             this.lbl_telefone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone.Location = new System.Drawing.Point(298, 73);
+            this.lbl_telefone.Location = new System.Drawing.Point(318, 73);
             this.lbl_telefone.Name = "lbl_telefone";
             this.lbl_telefone.Size = new System.Drawing.Size(61, 17);
             this.lbl_telefone.TabIndex = 2;
@@ -109,7 +107,7 @@
             this.lbl_celular.AutoSize = true;
             this.lbl_celular.BackColor = System.Drawing.Color.Transparent;
             this.lbl_celular.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_celular.Location = new System.Drawing.Point(537, 73);
+            this.lbl_celular.Location = new System.Drawing.Point(553, 73);
             this.lbl_celular.Name = "lbl_celular";
             this.lbl_celular.Size = new System.Drawing.Size(53, 17);
             this.lbl_celular.TabIndex = 3;
@@ -118,7 +116,7 @@
             // gbox_endereco
             // 
             this.gbox_endereco.BackColor = System.Drawing.Color.Transparent;
-            this.gbox_endereco.Controls.Add(this.pictureBox1);
+            this.gbox_endereco.Controls.Add(this.button1);
             this.gbox_endereco.Controls.Add(this.mtxt_cep);
             this.gbox_endereco.Controls.Add(this.txt_complemento);
             this.gbox_endereco.Controls.Add(this.txt_bairro);
@@ -134,23 +132,25 @@
             this.gbox_endereco.Controls.Add(this.label2);
             this.gbox_endereco.Controls.Add(this.label1);
             this.gbox_endereco.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbox_endereco.Location = new System.Drawing.Point(34, 119);
+            this.gbox_endereco.Location = new System.Drawing.Point(38, 119);
             this.gbox_endereco.Name = "gbox_endereco";
             this.gbox_endereco.Size = new System.Drawing.Size(708, 182);
-            this.gbox_endereco.TabIndex = 4;
+            this.gbox_endereco.TabIndex = 6;
             this.gbox_endereco.TabStop = false;
             this.gbox_endereco.Text = "Endereço";
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = global::JSVILLELA.Properties.Resources.Lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(211, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::JSVILLELA.Properties.Resources.Magnifying_Glass2;
+            this.button1.Location = new System.Drawing.Point(216, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mtxt_cep
             // 
@@ -158,7 +158,7 @@
             this.mtxt_cep.Mask = "00000-000";
             this.mtxt_cep.Name = "mtxt_cep";
             this.mtxt_cep.Size = new System.Drawing.Size(107, 25);
-            this.mtxt_cep.TabIndex = 5;
+            this.mtxt_cep.TabIndex = 6;
             // 
             // txt_complemento
             // 
@@ -166,7 +166,7 @@
             this.txt_complemento.MaxLength = 50;
             this.txt_complemento.Name = "txt_complemento";
             this.txt_complemento.Size = new System.Drawing.Size(563, 25);
-            this.txt_complemento.TabIndex = 11;
+            this.txt_complemento.TabIndex = 13;
             // 
             // txt_bairro
             // 
@@ -174,7 +174,7 @@
             this.txt_bairro.MaxLength = 50;
             this.txt_bairro.Name = "txt_bairro";
             this.txt_bairro.Size = new System.Drawing.Size(323, 25);
-            this.txt_bairro.TabIndex = 10;
+            this.txt_bairro.TabIndex = 12;
             // 
             // txt_numero
             // 
@@ -182,7 +182,7 @@
             this.txt_numero.MaxLength = 8;
             this.txt_numero.Name = "txt_numero";
             this.txt_numero.Size = new System.Drawing.Size(112, 25);
-            this.txt_numero.TabIndex = 9;
+            this.txt_numero.TabIndex = 11;
             // 
             // txt_endereco
             // 
@@ -190,7 +190,7 @@
             this.txt_endereco.MaxLength = 200;
             this.txt_endereco.Name = "txt_endereco";
             this.txt_endereco.Size = new System.Drawing.Size(599, 25);
-            this.txt_endereco.TabIndex = 8;
+            this.txt_endereco.TabIndex = 10;
             // 
             // txt_cidade
             // 
@@ -198,18 +198,19 @@
             this.txt_cidade.MaxLength = 30;
             this.txt_cidade.Name = "txt_cidade";
             this.txt_cidade.Size = new System.Drawing.Size(218, 25);
-            this.txt_cidade.TabIndex = 7;
+            this.txt_cidade.TabIndex = 9;
             // 
             // cbox_uf
             // 
             this.cbox_uf.DisplayMember = "SP";
+            this.cbox_uf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbox_uf.FormattingEnabled = true;
             this.cbox_uf.Items.AddRange(new object[] {
             "SP"});
             this.cbox_uf.Location = new System.Drawing.Point(318, 29);
             this.cbox_uf.Name = "cbox_uf";
             this.cbox_uf.Size = new System.Drawing.Size(69, 25);
-            this.cbox_uf.TabIndex = 6;
+            this.cbox_uf.TabIndex = 8;
             // 
             // label7
             // 
@@ -286,10 +287,10 @@
             this.gbox_banco.Controls.Add(this.label9);
             this.gbox_banco.Controls.Add(this.label8);
             this.gbox_banco.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbox_banco.Location = new System.Drawing.Point(34, 328);
+            this.gbox_banco.Location = new System.Drawing.Point(38, 328);
             this.gbox_banco.Name = "gbox_banco";
             this.gbox_banco.Size = new System.Drawing.Size(708, 116);
-            this.gbox_banco.TabIndex = 5;
+            this.gbox_banco.TabIndex = 14;
             this.gbox_banco.TabStop = false;
             this.gbox_banco.Text = "Dados Bancários";
             // 
@@ -299,7 +300,7 @@
             this.txt_conta.MaxLength = 15;
             this.txt_conta.Name = "txt_conta";
             this.txt_conta.Size = new System.Drawing.Size(249, 25);
-            this.txt_conta.TabIndex = 15;
+            this.txt_conta.TabIndex = 17;
             // 
             // txt_agencia
             // 
@@ -307,7 +308,7 @@
             this.txt_agencia.MaxLength = 10;
             this.txt_agencia.Name = "txt_agencia";
             this.txt_agencia.Size = new System.Drawing.Size(215, 25);
-            this.txt_agencia.TabIndex = 14;
+            this.txt_agencia.TabIndex = 16;
             // 
             // cbox_tipoconta
             // 
@@ -318,7 +319,7 @@
             this.cbox_tipoconta.Location = new System.Drawing.Point(453, 29);
             this.cbox_tipoconta.Name = "cbox_tipoconta";
             this.cbox_tipoconta.Size = new System.Drawing.Size(249, 25);
-            this.cbox_tipoconta.TabIndex = 13;
+            this.cbox_tipoconta.TabIndex = 15;
             // 
             // txt_banco
             // 
@@ -326,7 +327,7 @@
             this.txt_banco.MaxLength = 50;
             this.txt_banco.Name = "txt_banco";
             this.txt_banco.Size = new System.Drawing.Size(237, 25);
-            this.txt_banco.TabIndex = 12;
+            this.txt_banco.TabIndex = 14;
             // 
             // label11
             // 
@@ -370,7 +371,7 @@
             this.txt_nome.Location = new System.Drawing.Point(95, 25);
             this.txt_nome.MaxLength = 60;
             this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(647, 25);
+            this.txt_nome.Size = new System.Drawing.Size(645, 25);
             this.txt_nome.TabIndex = 1;
             // 
             // mtxt_cpf
@@ -381,6 +382,7 @@
             this.mtxt_cpf.Name = "mtxt_cpf";
             this.mtxt_cpf.Size = new System.Drawing.Size(145, 25);
             this.mtxt_cpf.TabIndex = 2;
+            this.mtxt_cpf.TextChanged += new System.EventHandler(this.mtxt_cpf_TextChanged);
             // 
             // mtxt_telefone
             // 
@@ -389,7 +391,7 @@
             this.mtxt_telefone.Mask = "(99) 0000-0000";
             this.mtxt_telefone.Name = "mtxt_telefone";
             this.mtxt_telefone.Size = new System.Drawing.Size(114, 25);
-            this.mtxt_telefone.TabIndex = 3;
+            this.mtxt_telefone.TabIndex = 4;
             // 
             // mtxt_celular
             // 
@@ -397,8 +399,8 @@
             this.mtxt_celular.Location = new System.Drawing.Point(612, 70);
             this.mtxt_celular.Mask = "(99) 00000-0000";
             this.mtxt_celular.Name = "mtxt_celular";
-            this.mtxt_celular.Size = new System.Drawing.Size(130, 25);
-            this.mtxt_celular.TabIndex = 4;
+            this.mtxt_celular.Size = new System.Drawing.Size(128, 25);
+            this.mtxt_celular.TabIndex = 5;
             // 
             // btn_cadastrar
             // 
@@ -408,7 +410,7 @@
             this.btn_cadastrar.Location = new System.Drawing.Point(518, 460);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(100, 50);
-            this.btn_cadastrar.TabIndex = 16;
+            this.btn_cadastrar.TabIndex = 18;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = false;
             this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
@@ -421,22 +423,23 @@
             this.btn_limpar.Location = new System.Drawing.Point(144, 460);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(100, 50);
-            this.btn_limpar.TabIndex = 17;
+            this.btn_limpar.TabIndex = 19;
             this.btn_limpar.Text = "Limpar";
             this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
-            // pictureBox2
+            // button2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::JSVILLELA.Properties.Resources.Interrogacao;
-            this.pictureBox2.Location = new System.Drawing.Point(245, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::JSVILLELA.Properties.Resources.Question;
+            this.button2.Location = new System.Drawing.Point(246, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 3;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CadastroRedeiros
             // 
@@ -445,7 +448,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.mtxt_celular);
@@ -469,10 +472,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroRedeiros_FormClosing);
             this.gbox_endereco.ResumeLayout(false);
             this.gbox_endereco.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbox_banco.ResumeLayout(false);
             this.gbox_banco.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,7 +515,7 @@
         private System.Windows.Forms.MaskedTextBox mtxt_celular;
         private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Button btn_limpar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -125,7 +125,7 @@ namespace JSVILLELA
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             XmlCep xmlcep = new XmlCep();
 
@@ -137,28 +137,37 @@ namespace JSVILLELA
             {
                 if (MessageBox.Show(ERRO.Message, "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
                 {
-                    pictureBox1_Click(null, null);
+                    button1_Click(null, null);
                 }
             }
-            
+
             txt_cidade.Text = xmlcep.Cidade;
             txt_bairro.Text = xmlcep.Bairro;
             txt_endereco.Text = xmlcep.Endereco;
             txt_complemento.Text = xmlcep.Complemento;
             cbox_uf.Text = xmlcep.Uf;
+            mtxt_cep.Focus();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             CpfCnpj cpf = new CpfCnpj();
             if (CpfCnpj.CpfCnpjUtils.IsValid(mtxt_cpf.Text.Replace(".", "").Replace("-", "").Trim()))
             {
-                MessageBox.Show("CPF válido.","Validação de CPF",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("CPF válido.", "Validação de CPF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button2.Image = JSVILLELA.Properties.Resources.Check;
             }
             else
             {
                 MessageBox.Show("CPF inválido.", "Validação de CPF", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                button2.Image = JSVILLELA.Properties.Resources.Wrong;
             }
+            mtxt_cpf.Focus();
+        }
+
+        private void mtxt_cpf_TextChanged(object sender, EventArgs e)
+        {
+            button2.Image = JSVILLELA.Properties.Resources.Question;
         }
     }
 }

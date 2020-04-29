@@ -54,7 +54,7 @@ namespace JSVILLELA
                 Conexao conexao = new Conexao();
                 string sql = "SELECT codigo AS 'código', descricao AS 'Descrição', valor AS 'Valor (R$)', peso AS 'Peso (Kg)' FROM tb_produtos";
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, conexao.Conectar());
-                
+
                 da.Fill(ds, "Tabela de Produtos");
                 conexao.Desconectar();
                 dataGridView1.DataSource = ds;

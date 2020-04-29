@@ -68,6 +68,7 @@
             this.btn_entregas = new System.Windows.Forms.Button();
             this.btn_pagamentos = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
+            this.lbl_valortotal = new System.Windows.Forms.Label();
             this.gbox_endereco.SuspendLayout();
             this.gbox_dadosbancarios.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +77,7 @@
             // 
             this.lbl_cod.AutoSize = true;
             this.lbl_cod.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_cod.Location = new System.Drawing.Point(9, 36);
+            this.lbl_cod.Location = new System.Drawing.Point(18, 35);
             this.lbl_cod.Name = "lbl_cod";
             this.lbl_cod.Size = new System.Drawing.Size(54, 17);
             this.lbl_cod.TabIndex = 0;
@@ -84,16 +85,16 @@
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(69, 32);
+            this.txt_codigo.Location = new System.Drawing.Point(78, 32);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(79, 25);
+            this.txt_codigo.Size = new System.Drawing.Size(110, 25);
             this.txt_codigo.TabIndex = 1;
             // 
             // lbl_nome
             // 
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_nome.Location = new System.Drawing.Point(12, 66);
+            this.lbl_nome.Location = new System.Drawing.Point(18, 66);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(48, 17);
             this.lbl_nome.TabIndex = 2;
@@ -123,7 +124,7 @@
             // 
             this.lbl_cpf.AutoSize = true;
             this.lbl_cpf.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_cpf.Location = new System.Drawing.Point(17, 97);
+            this.lbl_cpf.Location = new System.Drawing.Point(18, 97);
             this.lbl_cpf.Name = "lbl_cpf";
             this.lbl_cpf.Size = new System.Drawing.Size(34, 17);
             this.lbl_cpf.TabIndex = 5;
@@ -133,7 +134,7 @@
             // 
             this.btn_buscar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.Location = new System.Drawing.Point(154, 32);
+            this.btn_buscar.Location = new System.Drawing.Point(194, 31);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(59, 25);
             this.btn_buscar.TabIndex = 2;
@@ -145,7 +146,7 @@
             // 
             this.btn_buscarnome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_buscarnome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscarnome.Location = new System.Drawing.Point(219, 32);
+            this.btn_buscarnome.Location = new System.Drawing.Point(259, 31);
             this.btn_buscarnome.Name = "btn_buscarnome";
             this.btn_buscarnome.Size = new System.Drawing.Size(126, 25);
             this.btn_buscarnome.TabIndex = 3;
@@ -157,7 +158,7 @@
             this.lbl_total.AutoSize = true;
             this.lbl_total.BackColor = System.Drawing.Color.Transparent;
             this.lbl_total.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(467, 30);
+            this.lbl_total.Location = new System.Drawing.Point(467, 22);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(143, 25);
             this.lbl_total.TabIndex = 8;
@@ -166,10 +167,10 @@
             // txt_nome
             // 
             this.txt_nome.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_nome.Location = new System.Drawing.Point(69, 63);
+            this.txt_nome.Location = new System.Drawing.Point(78, 63);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.ReadOnly = true;
-            this.txt_nome.Size = new System.Drawing.Size(703, 25);
+            this.txt_nome.Size = new System.Drawing.Size(688, 25);
             this.txt_nome.TabIndex = 4;
             // 
             // gbox_endereco
@@ -189,7 +190,7 @@
             this.gbox_endereco.Controls.Add(this.lbl_numero);
             this.gbox_endereco.Controls.Add(this.lbl_endereco);
             this.gbox_endereco.Controls.Add(this.lbl_cep);
-            this.gbox_endereco.Location = new System.Drawing.Point(6, 139);
+            this.gbox_endereco.Location = new System.Drawing.Point(12, 139);
             this.gbox_endereco.Name = "gbox_endereco";
             this.gbox_endereco.Size = new System.Drawing.Size(760, 156);
             this.gbox_endereco.TabIndex = 11;
@@ -326,7 +327,7 @@
             this.gbox_dadosbancarios.Controls.Add(this.lbl_agencia);
             this.gbox_dadosbancarios.Controls.Add(this.lbl_tipoconta);
             this.gbox_dadosbancarios.Controls.Add(this.lbl_banco);
-            this.gbox_dadosbancarios.Location = new System.Drawing.Point(6, 316);
+            this.gbox_dadosbancarios.Location = new System.Drawing.Point(12, 316);
             this.gbox_dadosbancarios.Name = "gbox_dadosbancarios";
             this.gbox_dadosbancarios.Size = new System.Drawing.Size(760, 91);
             this.gbox_dadosbancarios.TabIndex = 12;
@@ -403,10 +404,10 @@
             // 
             // txt_cpf
             // 
-            this.txt_cpf.Location = new System.Drawing.Point(69, 94);
+            this.txt_cpf.Location = new System.Drawing.Point(78, 94);
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.ReadOnly = true;
-            this.txt_cpf.Size = new System.Drawing.Size(162, 25);
+            this.txt_cpf.Size = new System.Drawing.Size(153, 25);
             this.txt_cpf.TabIndex = 5;
             // 
             // txt_telefone
@@ -422,7 +423,7 @@
             this.txt_celular.Location = new System.Drawing.Point(593, 94);
             this.txt_celular.Name = "txt_celular";
             this.txt_celular.ReadOnly = true;
-            this.txt_celular.Size = new System.Drawing.Size(179, 25);
+            this.txt_celular.Size = new System.Drawing.Size(173, 25);
             this.txt_celular.TabIndex = 7;
             // 
             // btn_entregas
@@ -462,6 +463,17 @@
             this.btn_excluir.UseVisualStyleBackColor = false;
             this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
+            // lbl_valortotal
+            // 
+            this.lbl_valortotal.AutoSize = true;
+            this.lbl_valortotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_valortotal.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_valortotal.Location = new System.Drawing.Point(616, 22);
+            this.lbl_valortotal.Name = "lbl_valortotal";
+            this.lbl_valortotal.Size = new System.Drawing.Size(78, 25);
+            this.lbl_valortotal.TabIndex = 22;
+            this.lbl_valortotal.Text = "R$ 0,00";
+            // 
             // ConsultaPrestador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -469,6 +481,7 @@
             this.BackgroundImage = global::JSVILLELA.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl_valortotal);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_pagamentos);
             this.Controls.Add(this.btn_entregas);
@@ -495,7 +508,6 @@
             this.Text = "Consultar Prestador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConsultaPrestador_FormClosing);
-            this.Load += new System.EventHandler(this.ConsultaPrestador_Load);
             this.gbox_endereco.ResumeLayout(false);
             this.gbox_endereco.PerformLayout();
             this.gbox_dadosbancarios.ResumeLayout(false);
@@ -547,5 +559,6 @@
         private System.Windows.Forms.Button btn_entregas;
         private System.Windows.Forms.Button btn_pagamentos;
         private System.Windows.Forms.Button btn_excluir;
+        private System.Windows.Forms.Label lbl_valortotal;
     }
 }
